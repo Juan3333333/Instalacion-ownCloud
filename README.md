@@ -19,25 +19,17 @@ Como instalar ownCloud utilizando vagrant
 13. systemctl restart apache2
 # Ahora configuramos el mysql
 14. smx2b@turing-117 mysql
-
 CREATE DATABASE bbdd;
-
 CREATE USER 'usuario'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
-
 GRANT ALL ON bbdd.* to 'usuario'@'localhost';
-
 # Salimos
-
 exit
 # Comprobamos conexion desde afuera
 15. smx2b@turing-117 mysql -u usuario -p 
 # Ahora descargamos el zip de owncloud desde este link
-
 https://owncloud.com/download-server/
-
 # Una vez descargado movemos el archivo a la carpeta donde tenemos nuestro repositorio
-
-Despues movemos el archvio desde vagrant a /var/www/html
+16. Despues movemos el archvio desde vagrant a /var/www/html
 
 mv /vagrant/owncloud.zip /var/www/html/
 
